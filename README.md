@@ -55,7 +55,7 @@ body, err := client.Message.SendMessage(number, message, nil)
 
 // send a template message
 number := "1982388224"
-template := "template"
+template := "template-name"
 
 params := map[string]interface{}{
   "key1": "value1",

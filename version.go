@@ -4,4 +4,4 @@ package waeasyapi
 const SDKName = "waeasyapi-go"
 
 //SDKVersion ...
-const SDKVersion = "1.4.0"
+const SDKVersion = "1.5.0"
