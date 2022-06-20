@@ -14,7 +14,7 @@ type Message struct {
 }
 
 // send a message
-func (p *Payment) sendMessage(number string, message string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
+func (p *Message) sendMessage(number string, message string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
 
 	url := fmt.Sprintf("%s/%s/message", constants.MESSAGE_URL, url.PathEscape(number))
 	if data == nil {
@@ -26,7 +26,7 @@ func (p *Payment) sendMessage(number string, message string, data map[string]int
 }
 
 // send a template message
-func (p *Payment) sendTemplate(number string, template string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
+func (p *Message) sendTemplate(number string, template string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
 
 	url := fmt.Sprintf("%s/%s/template", constants.MESSAGE_URL, url.PathEscape(number))
 	if data == nil {
@@ -38,7 +38,7 @@ func (p *Payment) sendTemplate(number string, template string, data map[string]i
 }
 
 // send a media message
-func (p *Payment) sendMedia(number string, template string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
+func (p *Message) sendMedia(number string, template string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
 
 	url := fmt.Sprintf("%s/%s/media", constants.MESSAGE_URL, url.PathEscape(number))
 	if data == nil {
