@@ -72,12 +72,13 @@ body, err := client.Message.SendTemplate(number, template, params, nil)
 // send a media message
 number := "1982388224"
 template := "template"
+media := "media-url-or-media-blob"
 
 params := map[string]interface{}{
   "key1": "value1",
   "key2": "value2",
 }
-body, err := client.Message.SendMedia(number, template, params, nil)
+body, err := client.Message.SendMedia(number, template, media, params, nil)
 ```
 
 ## License
