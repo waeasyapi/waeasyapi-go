@@ -33,6 +33,10 @@ message := "Hello World"
 
 body, err := client.message.sendMessage(number, , nil)
 
+```
+
+```go
+
 // send a template message
 number := "pay_CBYy6tLmJTzn3Q"
 template := "template"
@@ -42,6 +46,10 @@ params := map[string]interface{}{
   "key2": "value2",
 }
 body, err := client.message.sendTemplate(number, template, params, nil)
+
+```
+
+```go
 
 // send a media message
 number := "pay_CBYy6tLmJTzn3Q"
