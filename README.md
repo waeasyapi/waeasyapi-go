@@ -20,12 +20,16 @@ go get github.com/waeasyapi/waeasyapi-go
 
 ```
 
+Or
     
 
 ```go
-import (
-waeasyapi "github.com/waeasyapi/waeasyapi-go"
-)
+
+import (waeasyapi "github.com/waeasyapi/waeasyapi-go")
+
+```
+
+```go
 
 client := waeasyapi.NewClient("<YOUR_ACC_KEY>", "<YOUR_ACC_SECRET>")
 
