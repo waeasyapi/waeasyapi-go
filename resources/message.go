@@ -17,6 +17,7 @@ type Message struct {
 func (p *Message) SendMessage(number string, message string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
 
 	url := constants.MESSAGE_URL + "/message"
+	fmt.Println("HERE: ", url, constants.MESSAGE_URL)
 	if data == nil {
 		data = make(map[string]interface{})
 	}
