@@ -14,7 +14,7 @@ type Message struct {
 }
 
 // send a message
-func (p *Message) sendMessage(number string, message string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
+func (p *Message) SendMessage(number string, message string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
 
 	url := fmt.Sprintf("%s/%s/message", constants.MESSAGE_URL, url.PathEscape(number))
 	if data == nil {
