@@ -15,6 +15,14 @@ You need to setup your key and secret using the following:
 You can find your keys at <https://app.waeasyapi.com/>.
 
 ```go
+
+go get github.com/waeasyapi/waeasyapi-go
+
+```
+
+    
+
+```go
 import (
 waeasyapi "github.com/waeasyapi/waeasyapi-go"
 )
