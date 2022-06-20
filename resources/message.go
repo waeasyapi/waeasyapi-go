@@ -11,13 +11,13 @@ type Message struct {
 }
 
 // send a message
-func (p *Message) SendMessage(number string, message string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
+func (p *Message) SendMessage(number string, message string, extraHeaders map[string]string) (map[string]interface{}, error) {
 
 	url := constants.MESSAGE_URL + "/message"
-	if data == nil {
-		data = make(map[string]interface{})
+	data := map[string]interface{}{
+		"number": number,
+		"message": message,
 	}
-	data["message"] = message
 
 	return p.Request.Post(url, data, extraHeaders)
 }
