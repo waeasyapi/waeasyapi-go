@@ -27,8 +27,10 @@ Note: All methods return a `map[string]interface{}` and `error`
 
 ```go
 
+// number must start with the country's dialing code
+
 // send a message
-number := "pay_CBYy6tLmJTzn3Q"
+number := "1982388224"
 message := "Hello World"
 
 body, err := client.message.sendMessage(number, , nil)
@@ -37,8 +39,10 @@ body, err := client.message.sendMessage(number, , nil)
 
 ```go
 
+// number must start with the country's dialing code
+
 // send a template message
-number := "pay_CBYy6tLmJTzn3Q"
+number := "1982388224"
 template := "template"
 
 params := map[string]interface{}{
@@ -51,8 +55,10 @@ body, err := client.message.sendTemplate(number, template, params, nil)
 
 ```go
 
+// number must start with the country's dialing code
+
 // send a media message
-number := "pay_CBYy6tLmJTzn3Q"
+number := "1982388224"
 template := "template"
 
 params := map[string]interface{}{
