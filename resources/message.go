@@ -1,5 +1,6 @@
 package resources
 
+import "fmt"
 import (
 	"fmt"
     "net/url"

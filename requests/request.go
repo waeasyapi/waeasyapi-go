@@ -1,5 +1,6 @@
 package requests
 
+import "fmt"
 import (
 	"bytes"
 	"encoding/json"
