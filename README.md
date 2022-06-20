@@ -4,7 +4,7 @@ Golang bindings for interacting with the WA Easy API
 
 This is primarily meant for merchants who wish to perform interactions with the WA Easy API programatically
 
-Read up here for getting started and understanding the payment flow with WA Easy API: <https://docs.waeasyapi.com/>
+Read up here for getting started and understanding the messages flow with WA Easy API: <https://docs.waeasyapi.com/>
 
 ## Documentation
 
@@ -45,7 +45,7 @@ Note: All methods return a `map[string]interface{}` and `error`
 number := "1982388224"
 message := "Hello World"
 
-body, err := client.message.sendMessage(number, , nil)
+body, err := client.message.sendMessage(number, message, nil)
 
 ```
 
