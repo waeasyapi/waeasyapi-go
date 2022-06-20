@@ -162,6 +162,8 @@ func (request *Request) Post(path string, payload map[string]interface{}, extraH
 
 	url := fmt.Sprintf("%s%s", request.BaseURL, path)
 
+	fmt.Println("INTERNAL: ", url)
+
 	req, _ := http.NewRequest("POST", url, bytes.NewBuffer(jsonStr))
 
 	req.SetBasicAuth(request.Auth.Key, request.Auth.Secret)
