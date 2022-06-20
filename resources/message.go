@@ -1,6 +1,5 @@
 package resources
 
-import "fmt"
 import (
 	"fmt"
     "net/url"
@@ -18,7 +17,7 @@ type Message struct {
 func (p *Message) SendMessage(number string, message string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
 
 	url := constants.MESSAGE_URL + "/message"
-	fmt.Println("HERE: ", url, constants.MESSAGE_URL)
+	fmt.Println("HERE: ", url)
 	if data == nil {
 		data = make(map[string]interface{})
 	}
