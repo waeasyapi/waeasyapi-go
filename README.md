@@ -45,7 +45,7 @@ Note: All methods return a `map[string]interface{}` and `error`
 number := "1982388224"
 message := "Hello World"
 
-body, err := client.message.sendMessage(number, message, nil)
+body, err := client.message.SendMessage(number, message, nil)
 
 ```
 
@@ -61,7 +61,7 @@ params := map[string]interface{}{
   "key1": "value1",
   "key2": "value2",
 }
-body, err := client.message.sendTemplate(number, template, params, nil)
+body, err := client.message.SendTemplate(number, template, params, nil)
 
 ```
 
@@ -77,7 +77,7 @@ params := map[string]interface{}{
   "key1": "value1",
   "key2": "value2",
 }
-body, err := client.message.sendTemplate(number, template, params, nil)
+body, err := client.message.SendMedia(number, template, params, nil)
 ```
 
 ## License
