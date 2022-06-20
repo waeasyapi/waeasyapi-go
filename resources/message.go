@@ -35,12 +35,13 @@ func (p *Message) SendTemplate(number string, template string, params map[string
 }
 
 // send a media message
-func (p *Message) SendMedia(number string, template string, params map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
+func (p *Message) SendMedia(number string, template string, media string, params map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
 
 	url := constants.MESSAGE_URL + "/media"
 	data := map[string]interface{}{
 		"number": number,
 		"template": template,
+		"media": media,
 		"params": params,
 	}
 	return p.Request.Post(url, data, extraHeaders)
