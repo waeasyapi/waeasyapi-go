@@ -39,7 +39,7 @@ func (client *Client) AddHeaders(headers map[string]string) {
 	Request.AddHeaders(headers)
 }
 
-// SetTimeout sets the timeout of WAEasyAPI's Client. The default timeout will
+// SetTimeout sets the timeout of WA Easy API's Client. The default timeout will
 // be overridden for all HTTP requests made using this client.
 func (client *Client) SetTimeout(timeout int16) {
 	Request.SetTimeout(timeout)

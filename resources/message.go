@@ -16,7 +16,7 @@ type Message struct {
 // send a message
 func (p *Message) SendMessage(number string, message string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
 
-	url := fmt.Sprintf("%s/%s/message", constants.MESSAGE_URL, url.PathEscape(number))
+	url := fmt.Sprintf("%s/message", constants.MESSAGE_URL, url.PathEscape(number))
 	if data == nil {
 		data = make(map[string]interface{})
 	}
@@ -26,7 +26,7 @@ func (p *Message) SendMessage(number string, message string, data map[string]int
 }
 
 // send a template message
-func (p *Message) sendTemplate(number string, template string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
+func (p *Message) SendTemplate(number string, template string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
 
 	url := fmt.Sprintf("%s/%s/template", constants.MESSAGE_URL, url.PathEscape(number))
 	if data == nil {
@@ -38,7 +38,7 @@ func (p *Message) sendTemplate(number string, template string, data map[string]i
 }
 
 // send a media message
-func (p *Message) sendMedia(number string, template string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
+func (p *Message) SendMedia(number string, template string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
 
 	url := fmt.Sprintf("%s/%s/media", constants.MESSAGE_URL, url.PathEscape(number))
 	if data == nil {
