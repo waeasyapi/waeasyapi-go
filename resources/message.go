@@ -1,9 +1,6 @@
 package resources
 
 import (
-	"fmt"
-    "net/url"
-	
 	"github.com/waeasyapi/waeasyapi-go/constants"
 	"github.com/waeasyapi/waeasyapi-go/requests"
 )
