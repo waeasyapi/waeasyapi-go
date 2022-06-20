@@ -23,25 +23,25 @@ func (p *Message) SendMessage(number string, message string, extraHeaders map[st
 }
 
 // send a template message
-func (p *Message) SendTemplate(number string, template string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
+func (p *Message) SendTemplate(number string, template string, params map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
 
 	url := constants.MESSAGE_URL + "/template"
-	if data == nil {
-		data = make(map[string]interface{})
+	data := map[string]interface{}{
+		"number": number,
+		"template": template,
+		"params": params,
 	}
-	data["template"] = template
-
 	return p.Request.Post(url, data, extraHeaders)
 }
 
 // send a media message
-func (p *Message) SendMedia(number string, template string, data map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
+func (p *Message) SendMedia(number string, template string, params map[string]interface{}, extraHeaders map[string]string) (map[string]interface{}, error) {
 
 	url := constants.MESSAGE_URL + "/media"
-	if data == nil {
-		data = make(map[string]interface{})
+	data := map[string]interface{}{
+		"number": number,
+		"template": template,
+		"params": params,
 	}
-	data["template"] = template
-
 	return p.Request.Post(url, data, extraHeaders)
 }
