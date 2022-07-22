@@ -41,17 +41,11 @@ Note: All methods return a `map[string]interface{}` and `error`
 
 // number must start with the country's dialing code
 
-// send a message
+// send a text message
 number := "1982388224"
 message := "Hello World"
 
-body, err := client.Message.SendMessage(number, message, nil)
-
-```
-
-```go
-
-// number must start with the country's dialing code
+body, err := client.Message.SendTextMessage(number, message, nil)
 
 // send a template message
 number := "1982388224"
@@ -61,24 +55,46 @@ params := map[string]interface{}{
   "key1": "value1",
   "key2": "value2",
 }
-body, err := client.Message.SendTemplate(number, template, params, nil)
+body, err := client.Message.SendTemplateMessage(number, template, params, nil)
 
-```
 
-```go
-
-// number must start with the country's dialing code
-
-// send a media message
+// send a url message
 number := "1982388224"
-template := "template"
-media := "media-url-or-media-blob"
+url := "https://waeasyapi.com"
 
+body, err := client.Message.SendTextMessage(number, url, nil)
+
+// send a url message
+number := "1982388224"
 params := map[string]interface{}{
-  "key1": "value1",
-  "key2": "value2",
+  "link": "your_image_url",
+  "caption": "your image caption" // optional
 }
-body, err := client.Message.SendMedia(number, template, media, params, nil)
+body, err := client.Message.SendImageMessage(number, params, nil)
+
+// send a video message
+number := "1982388224"
+params := map[string]interface{}{
+  "link": "your_video_url",
+  "caption": "your video caption" // optional
+}
+body, err := client.Message.SendVideoMessage(number, params, nil)
+
+// send a audio message
+number := "1982388224"
+params := map[string]interface{}{
+  "link": "your_audio_url",
+}
+body, err := client.Message.SendAudioMessage(number, params, nil)
+
+// send a document message
+number := "1982388224"
+params := map[string]interface{}{
+  "link": "your_document_url",
+  "filename": "your filename" // optional
+}
+body, err := client.Message.SendDocumentMessage(number, params, nil)
+
 ```
 
 ## License
