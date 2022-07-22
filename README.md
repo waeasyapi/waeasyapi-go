@@ -62,7 +62,7 @@ body, err := client.Message.SendTemplateMessage(number, template, params, nil)
 number := "1982388224"
 url := "https://waeasyapi.com"
 
-body, err := client.Message.SendTextMessage(number, url, nil)
+body, err := client.Message.SendURLMessage(number, url, nil)
 
 // send a url message
 number := "1982388224"
