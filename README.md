@@ -64,7 +64,7 @@ url := "https://waeasyapi.com"
 
 body, err := client.Message.SendURLMessage(number, url, nil)
 
-// send a url message
+// send an image message
 number := "1982388224"
 params := map[string]interface{}{
   "link": "your_image_url",
